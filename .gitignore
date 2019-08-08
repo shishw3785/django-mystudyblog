@@ -1,3 +1,15 @@
 venv
 
 db.sqlite3
+
+comments/migrations
+
+blog/migrations
+
+myblog/__pycache__
+
+comments/__pycache__
+
+blog/__pycache__
+
+blog/templatetags/__pycache__

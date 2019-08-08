@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post, Category
 from comments.forms import CommentForm
-import markdown
+##import markdown
 # Create your views here.
 
 def index(request):
@@ -10,7 +10,7 @@ def index(request):
 
 def detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    post.increase_views()
+    post.increase_views()  #views增加一次
     form = CommentForm()
     comment_list = post.comment_set.all()
     context = {'post': post,
