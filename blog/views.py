@@ -1,9 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Post, Category
 from comments.forms import CommentForm
+
 from django.views.generic import ListView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-##import markdown
+
 # Create your views here.
 
 def index(request):
@@ -18,6 +19,7 @@ def detail(request, pk):
     post.increase_views()  #views增加一次
     form = CommentForm()
     comment_list = post.comment_set.all()
+
     context = {'post': post,
                'form': form,
                'comment_list': comment_list
