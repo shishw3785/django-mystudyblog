@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load blog_tags %}
+
+
+{% block main %}
+
+
+
+
+                    {% for post in post_list %}
+                  	<div class="uk-margin uk-clearfix">
+
+                <div style="margin-left:40px;">
+                    <div class="uk-x"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></div>
+                </div>
+            </div>
+                    {% endfor %}
+
+            {% endblock main %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
